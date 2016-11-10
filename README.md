@@ -45,6 +45,8 @@ Start! fork this project or just download it
 > - `ember g template application`
 > - Personalize the page design using resources/css and bootstrap
 
+![](http://www.twiki.org/p/pub/TWiki06x00/TWikiDocGraphics/tip.gif) _BONUS TRACK:_ Create About page: generate route `about` and add some content to the template. Remember to add the menu entry.
+
 #### 3. Create component nav-menu
 
 **Steps:**

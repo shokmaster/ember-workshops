@@ -1,5 +1,5 @@
 {{! Bootstrap Navbar }}
-<div class="container">
+<div class="container-fluid">
 
     <div class="navbar-header">
     	{{! Collapsed menu for small screens }}
@@ -19,9 +19,14 @@
     	{{! Menu links}}
         <ul class="nav navbar-nav">
         	{{#each menuLinks as |link|}}
+        		<li>
+            		{{link-to (t link.label) link.url}}
+            	</li>
+            	{{!--
             	{{#link-to link.url tagName="li"}}
             		<a href="">{{t link.label}}</a>
             	{{/link-to}}
+            	--}}
             {{/each}}
         </ul>
 
