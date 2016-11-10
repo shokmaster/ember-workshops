@@ -76,5 +76,6 @@ Start! fork this project or just download it
 **Steps:**
 
 > - `ember g controller restaurants`
+> - Copy the cuisines object from resources/cuisines.json
 > - Add a new panel to templates/restaurants.hbs with a power-select-multiple
 > - Add a button with action `filter`
