@@ -4,6 +4,18 @@ export default Ember.Component.extend({
 
 	tagName: 'nav',
 
-	classNames: ['navbar', 'navbar-default']
+	classNames: ['navbar', 'navbar-default'],
+
+	isMenuOpened: false,
+
+	actions: {
+		toggleMenu(){
+			this.toggleProperty('isMenuOpened');
+ 		}
+	},
+
+	focusOut() {
+		this.set('isMenuOpened', false);
+	}
 
 });
