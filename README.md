@@ -79,3 +79,5 @@ Start! fork this project or just download it
 > - Copy the cuisines object from resources/cuisines.json
 > - Add a new panel to templates/restaurants.hbs with a power-select-multiple
 > - Add a button with action `filter`
+
+![](http://www.twiki.org/p/pub/TWiki06x00/TWikiDocGraphics/tip.gif) _BONUS TRACK:_ Create helper that receives an array of numbers and shows the name of the weekday.
