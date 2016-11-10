@@ -70,3 +70,11 @@ Start! fork this project or just download it
 
 > - `ember g helper restaurant-img`
 > - Copy images from resources and add restaurant img
+
+#### 6. Filter the restaurants
+
+**Steps:**
+
+> - `ember g controller restaurants`
+> - Add a new panel to templates/restaurants.hbs with a power-select-multiple
+> - Add a button with action `filter`
