@@ -41,8 +41,8 @@ Start! fork this project or just download it
 > - Redirect index to restaurants route
 > - Change the Restaurant Route to use `resources/restaurants.json` as the model
 > - Show restaurants list in the `restaurants.hbs` Template
-> - Personalize the page design using resources/css and bootstrap
 > - Go http://localhost:4000/ and see it!
+> - Personalize the page design using resources/css and bootstrap
 
 #### 3. Create component nav-menu
 
