@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 const languages = [{
-	name: 'ES',
+	name: 'Español',
 	code: 'es'
 }, {
-	name: 'ENG',
+	name: 'English',
 	code: 'en'
 }];
 
