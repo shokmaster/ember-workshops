@@ -25,6 +25,8 @@ export default {
 
 	"language": "Idioma",
 
-	"restaurants": "Restaurantes"
+	"restaurants": "Restaurantes",
+
+	"selectCuisins": "Selecciona tipo de cocina..."
 
 };
