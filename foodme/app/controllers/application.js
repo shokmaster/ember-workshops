@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
 	appName: 'FoodMe',
 
 	menuLinks: [{
-		label: 'restaurants',
+		name: 'Restaurants',
 		url: 'restaurants'
 	}]
 

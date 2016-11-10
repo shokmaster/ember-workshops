@@ -25,6 +25,21 @@
             {{/each}}
         </ul>
 
+    	{{! ChangeLanguage}}
+		<ul class="nav navbar-nav navbar-right">
+		  <li>
+			  {{#power-select
+			  selected=selectedLanguage
+			  options=languages
+			  class='dropdown'
+			  onchange=(action (mut selectedLanguage))
+			  as |language|
+			  }}
+				  {{language.name}}
+			  {{/power-select}}
+		  </li>
+		</ul>
+
     </div>
 
 </div>
