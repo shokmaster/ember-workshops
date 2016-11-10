@@ -27,6 +27,16 @@ export default {
 
 	"restaurants": "Restaurantes",
 
-	"selectCuisins": "Selecciona tipo de cocina..."
+	"selectCuisins": "Selecciona tipo de cocina...",
+
+	"weekDays": {
+		"sunday": "domingo",
+		"monday": "lunes",
+		"tuesday": "martes",
+		"wednesday": "miércoles",
+		"thursday": "jueves",
+		"friday": "viernes",
+		"saturday": "sábado"
+	}
 
 };
