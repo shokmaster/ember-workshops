@@ -20,7 +20,7 @@
         <ul class="nav navbar-nav">
         	{{#each menuLinks as |link|}}
             	{{#link-to link.url tagName="li"}}
-            		<a href="">{{link.name}}</a>
+            		<a href="">{{t link.label}}</a>
             	{{/link-to}}
             {{/each}}
         </ul>

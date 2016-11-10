@@ -59,6 +59,7 @@ Start! fork this project or just download it
 
 > - `ember install ember-i18n`
 > - Add translations with `ember generate locale en && ember generate locale es`
+> - Copy the translations from `resources/translations` folder
 > - Add change language dropdown with: `ember install ember-cli-sass && ember install ember-power-select`
 
 #### 5. Create a helper
