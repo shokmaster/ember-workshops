@@ -1,0 +1,30 @@
+{{! Bootstrap Navbar }}
+<div class="container">
+
+    <div class="navbar-header">
+    	{{! Collapsed menu for small screens }}
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+
+    	{{! Brand with link }}
+    	{{link-to appName "index" class="navbar-brand"}}
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar">
+
+    	{{! Menu links}}
+        <ul class="nav navbar-nav">
+        	{{#each menuLinks as |link|}}
+            	{{#link-to link.url tagName="li"}}
+            		<a href="">{{link.name}}</a>
+            	{{/link-to}}
+            {{/each}}
+        </ul>
+
+    </div>
+
+</div>

@@ -42,6 +42,7 @@ Start! fork this project or just download it
 > - Change the Restaurant Route to use `resources/restaurants.json` as the model
 > - Show restaurants list in the `restaurants.hbs` Template
 > - Go http://localhost:4000/ and see it!
+> - `ember g template application`
 > - Personalize the page design using resources/css and bootstrap
 
 #### 3. Create component nav-menu
@@ -49,6 +50,7 @@ Start! fork this project or just download it
 **Steps:**
 
 > - `ember g component nav-menu`
+> - `ember g controller aplication` to set some variables
 
 #### 4. Add translations
 
