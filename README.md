@@ -51,6 +51,7 @@ Start! fork this project or just download it
 
 > - `ember g component nav-menu`
 > - `ember g controller aplication` to set some variables
+> - Add toggle behaviour to menu
 
 #### 4. Add translations
 
