@@ -6,7 +6,7 @@ const CUISINE_OPTIONS = [
 	{ name: 'barbecue', title: 'Barbecue' },
 	{ name: 'cafe', title: 'Cafe' },
 	{ name: 'chinese', title: 'Chinese' },
-	{ name: 'zech/slovak', title: 'Czech / Slovak' },
+	{ name: 'czech/slovak', title: 'Czech / Slovak' },
 	{ name: 'german', title: 'German' },
 	{ name: 'indian', title: 'Indian' },
 	{ name: 'japanese', title: 'Japanese' },
