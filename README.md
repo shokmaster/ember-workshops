@@ -81,3 +81,10 @@ Start! fork this project or just download it
 > - Add a button with action `filter`
 
 ![](http://www.twiki.org/p/pub/TWiki06x00/TWikiDocGraphics/tip.gif) _BONUS TRACK:_ Create helper that receives an array of numbers and shows the name of the weekday.
+
+#### 7. Add rating stars and filter by it
+
+**Steps:**
+
+> - `ember install ember-cli-star-rating`
+> - Add to template/restaurants.hbs to show the restaurants rating and the filter
