@@ -2,6 +2,8 @@
 APLICACIONES WEB CON UN HAMSTER GAFAPASTA
 ===================
 
+Slides: https://slides.com/beatrizdemiguelperez/deck-1
+
 ####  ¿Por qué este workshop?
 Porque empezar con un framework da mucha pereza. Pero don’t worry my friend, en menos de dos horas sabrás enfrentarte a uno de los mejores frameworks Javascript del momento.
 
