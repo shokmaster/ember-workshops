@@ -11,7 +11,7 @@ export function weekday(params /*, hash*/ ) {
 		4: 'thursday',
 		5: 'friday',
 		6: 'saturday',
-	}
+	};
 
 	return names[number] || '';
 }
