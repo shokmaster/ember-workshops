@@ -1,0 +1,47 @@
+<div class="row-fluid">
+
+	<div class="col-md-4">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">{{t 'filterRestaurants'}}</h3>
+			</div>
+				<div class="panel-body">
+					<!-- @TODO Rating filter here -->
+
+				   <label>{{t 'cuisine'}}</label>
+				   {{#power-select-multiple
+					  options=CUISINE_OPTIONS
+					  selected=selectedCuisins
+					  placeholder=(t 'selectCuisins')
+					  onchange=(action (mut selectedCuisins))
+					  as |cuisine|
+					}}
+					  {{cuisine.title}}
+					{{/power-select-multiple}}
+				 </div>
+		</div>
+	</div>
+
+	<div class="col-md-8">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">{{t 'foundRestaurants' count=filteredRestaurants.length}}</h3>
+			</div>
+
+			<div class="panel-body">
+				{{#each filteredRestaurants as |restaurant| }}
+					{{#link-to 'restaurants.detail' restaurant class="media"}}
+						<a class="media-left">
+							<img class="media-object" src={{restaurant-img restaurant.id}} width="64" height="64">
+						</a>
+						<div class="media-body">
+							<h4 class="media-heading">{{restaurant.name}}</h4>
+							{{restaurant.description}}
+
+						</div>
+					{{/link-to}}
+				{{/each}}
+			</div>
+		</div>
+	</div>
+</div>
