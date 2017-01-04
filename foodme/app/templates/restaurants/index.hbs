@@ -5,23 +5,31 @@
 			<div class="panel-heading">
 				<h3 class="panel-title">{{t 'filterRestaurants'}}</h3>
 			</div>
+
 			<div class="panel-body">
 				<label>{{t 'rating'}}</label>
 				{{star-rating rating=filterRating on-click='updateRating'}}
+			</div>
 
+			<div class="panel-body">
 				<label>{{t 'cuisine'}}</label>
 				{{#power-select-multiple
 					options=CUISINE_OPTIONS
-					selected=selectedCuisins
+					selected=filterCuisins
 					placeholder=(t 'selectCuisins')
-					onchange=(action (mut selectedCuisins))
+					onchange=(action (mut filterCuisins))
 					as |cuisine|}}
 					{{cuisine.title}}
 				{{/power-select-multiple}}
 			</div>
+
+			<div class="panel-body">
+				<label>{{t 'name'}}</label>
+				{{input value=filterName placeholder=(t 'name') class="form-control"}}
+			</div>
+
 			<div class="panel-footer">
 				<button {{action 'clear'}} class="btn btn-link">{{t 'clear'}}</button>
-				<button {{action 'filter'}} class="btn btn-primary pull-right">{{t 'filter'}}</button>
 			</div>
 		</div>
 	</div>
@@ -40,7 +48,7 @@
 						</a>
 						<div class="media-body">
 							<h4 class="media-heading">
-								{{link-to restaurant.name 'restaurants.detail' restaurant}} <small class="text-muted">{{restaurant.cuisine}}</small>
+								{{link-to restaurant.name 'restaurants.detail' restaurant}} <span class="label label-info">{{capitalize restaurant.cuisine}}</span>
 							</h4>
 							{{restaurant.description}}
 							{{star-rating rating=restaurant.rating}}

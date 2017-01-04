@@ -20,23 +20,40 @@ export default Ember.Controller.extend({
 
     CUISINE_OPTIONS,
 
-    selectedCuisins: [],
-
+    /**
+     * Filter criterias.
+     */
+    filterCuisins: [],
     filterRating: null,
+    filterName: null,
 
-    filteredRestaurants: Ember.computed('model', 'filterRating', function() {
+    /**
+     * Filter function.
+     */
+    filteredRestaurants: Ember.computed('model', 'filterCuisins', 'filterRating', 'filterName', function() {
         let filteredRestaurants = this.get('model');
-        const cuisinesFilters = this.get('selectedCuisins');
-        const filterRating = this.get('filterRating');
 
-        if (!Ember.isEmpty(cuisinesFilters)) {
-            filteredRestaurants = filteredRestaurants.filter((item) => {
-                return cuisinesFilters.mapBy('name').includes(item.cuisine);
-            });
+        const filterCuisins = this.get('filterCuisins');
+        const filterRating = this.get('filterRating');
+        const filterName = this.get('filterName');
+
+        // Filter by cuisine
+        if (Ember.isPresent(filterCuisins)) {
+            filteredRestaurants = filteredRestaurants.filter((item) =>
+                filterCuisins.mapBy('name').includes(item.cuisine)
+            );
         }
 
+        // Filter by rating
         if (filterRating) {
             filteredRestaurants = filteredRestaurants.filterBy('rating', filterRating);
+        }
+
+        // Filter by name
+        if (filterName) {
+            filteredRestaurants = filteredRestaurants.filter((restaurant) =>
+            	restaurant.name.toLowerCase().includes(filterName.toLowerCase())
+            );
         }
 
         return filteredRestaurants;
@@ -45,28 +62,11 @@ export default Ember.Controller.extend({
     actions: {
 
     	clear() {
-    		this.set('selectedCuisins', []);
+    		this.set('filterCuisins', []);
     		this.set('filterRating', null);
+    		this.set('filterName', null);
     		this.set('filteredRestaurants', this.get('model'));
     	},
-
-        filter() {
-            let filteredRestaurants = this.get('model');
-            const cuisinesFilters = this.get('selectedCuisins');
-            const filterRating = this.get('filterRating');
-
-            if (!Ember.isEmpty(cuisinesFilters)) {
-                filteredRestaurants = filteredRestaurants.filter((item) => {
-                    return cuisinesFilters.mapBy('name').includes(item.cuisine);
-                });
-            }
-
-            if (filterRating) {
-                filteredRestaurants = filteredRestaurants.filterBy('rating', filterRating);
-            }
-
-            this.set('filteredRestaurants', filteredRestaurants);
-        },
 
         updateRating(stars) {
             this.set('filterRating', stars.rating);
