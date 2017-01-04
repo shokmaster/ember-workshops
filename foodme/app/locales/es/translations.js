@@ -17,8 +17,6 @@ export default {
 
 	"description": "Descripción",
 
-	"filter": "Filtrar",
-
 	"filterRestaurants": "Filtra restaurantes",
 
 	"foundRestaurants": {
@@ -32,6 +30,8 @@ export default {
 	"location": "Localización",
 
 	"menu": "Menú",
+
+	"name": "Nombre",
 
 	"openingHours": "Horario",
 
