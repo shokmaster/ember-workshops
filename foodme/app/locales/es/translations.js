@@ -11,7 +11,11 @@ export default {
 
 	"about": "Sobre nosotros",
 
+	"clear": "Limpiar",
+
 	"cuisine": "Cocina",
+
+	"description": "Descripción",
 
 	"filter": "Filtrar",
 
@@ -24,6 +28,12 @@ export default {
 	},
 
 	"language": "Idioma",
+
+	"location": "Localización",
+
+	"menu": "Menú",
+
+	"openingHours": "Horario",
 
 	"rating": "Valoración",
 
