@@ -24,7 +24,7 @@ export default Ember.Controller.extend({
 
     filterRating: null,
 
-    filteredRestaurants: Ember.computed('model', 'filterRating', function() {console.log('filtrando restaurantes');
+    filteredRestaurants: Ember.computed('model', 'filterRating', function() {
         let filteredRestaurants = this.get('model');
         const cuisinesFilters = this.get('selectedCuisins');
         const filterRating = this.get('filterRating');
@@ -68,7 +68,7 @@ export default Ember.Controller.extend({
             this.set('filteredRestaurants', filteredRestaurants);
         },
 
-        updateRating(stars) {console.log(stars.rating);
+        updateRating(stars) {
             this.set('filterRating', stars.rating);
         }
 
