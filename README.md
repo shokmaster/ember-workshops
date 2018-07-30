@@ -1,6 +1,7 @@
 **NUEVA VERSION CON Ember 3.x:** https://github.com/shokmaster/ember-workshops-3
 
 ![](https://raw.githubusercontent.com/shokmaster/ember-workshops-3/master/_img/tomster-sm.png)
+
 APLICACIONES WEB CON UN HAMSTER GAFAPASTA
 ===================
 
